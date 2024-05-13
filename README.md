@@ -1,0 +1,2 @@
+# deaafrizal
+belajar sama dea
