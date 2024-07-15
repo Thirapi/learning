@@ -1,7 +1,8 @@
-const cross = document.querySelectorAll('.close'); 
+const container = document.querySelector('.container');
 
-cross.forEach(function(el){
-    el.addEventListener('click', function(e){
-        e.target.parentElement.style.display = 'none';
-    })
+container.addEventListener('click', (e) => {
+    if(e.target.className == 'close'){
+        const card = e.target.parentElement;
+        card.remove();
+    }
 })

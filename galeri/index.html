@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="s.css">
+    <title>Galeri</title>
+</head>
+<body>
+    <div class="container">
+        <img src="https://avatars.githubusercontent.com/u/132630759" alt="" class="jumbo">
+        <div class="thumbnail">
+            <img src="https://avatars.githubusercontent.com/b" alt="" class="thumb">
+            <img src="https://avatars.githubusercontent.com/v" alt="" class="thumb">
+            <img src="https://avatars.githubusercontent.com/n" alt="" class="thumb">
+            <img src="https://avatars.githubusercontent.com/x" alt="" class="thumb">
+            <img src="https://avatars.githubusercontent.com/z" alt="" class="thumb">
+            <img src="https://avatars.githubusercontent.com/m" alt="" class="thumb">
+        </div>
+    </div>
+
+<script>
+const thumb = document.querySelectorAll('.thumb');
+
+thumb.forEach(function(thumb){
+    function generateRandomLetter() {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const randomIndex = Math.floor(Math.random()
+    * alphabet.length);
+    return alphabet.charAt(randomIndex);
+    }
+    const randomLetter = generateRandomLetter();
+    let baseURL = "https://avatars.githubusercontent.com/";
+    let imageURL = baseURL + randomLetter;
+    thumb.src = imageURL;
+});
+</script>
+<script src="s.js"></script>   
+</body>
+</html>

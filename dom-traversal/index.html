@@ -16,21 +16,21 @@
     </div> 
 
     <div class="card">
-      <img src="https://avatars.githubusercontent.com/u/13230759" width="96" height="96">
+      <img class="myImage" src="https://avatars.githubusercontent.com/u/" id="myImage" width="96" height="96">
       <span class="nama">baph</span>
       <span class="telp">08123456789</span>
       <span class="close">×</span>
     </div> 
 
     <div class="card">
-      <img src="https://avatars.githubusercontent.com/u/132634659" width="96" height="96">
+      <img class="myImage" src="https://avatars.githubusercontent.com/u/" id="myImage" width="96" height="96">
       <span class="nama">jhon</span>
       <span class="telp">08123456789</span>
       <span class="close">×</span>
     </div> 
 
         <div class="card">
-      <img src="https://avatars.githubusercontent.com/u/13268759" width="96" height="96">
+      <img class="myImage" src="https://avatars.githubusercontent.com/u/" id="myImage" width="96" height="96">
       <span class="nama">dave</span>
       <span class="telp">08123456789</span>
       <span class="close">×</span>
@@ -38,6 +38,16 @@
 
 </div>
 
+<script>
+  const images = document.querySelectorAll(".myImage");
+
+  images.forEach(function(image){
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let baseURL = "https://avatars.githubusercontent.com/u/";
+    let imageURL = baseURL + randomNumber;
+    image.src = imageURL;
+  });
+</script>
 <script src="s.js"></script>
 </body>
 </html>
